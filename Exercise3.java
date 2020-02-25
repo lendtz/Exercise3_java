@@ -13,6 +13,19 @@ public class Exercise3{
 		texts.add("Laptop");
 		texts.add(null);
 		
+		List<Integer> numbers = new ArrayList<>();
+		numbers.add(2);
+		numbers.add(2);
+		numbers.add(3);
+		numbers.add(4);
+		numbers.add(4);
+		numbers.add(5);
+		numbers.add(6);
+		numbers.add(7);
+		numbers.add(8);
+		numbers.add(10);
+		
+		
 		
 		A.compareString("Hola","hey"); //calling compareString method from A.
 		A.compareString("boo","boo");
@@ -29,5 +42,9 @@ public class Exercise3{
 		
 		B obj = new B();
 		obj.orderedList(texts);
+		
+		obj.removeNull(texts);
+		
+		obj.givenMissingNumber(numbers);
  }
 }

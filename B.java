@@ -32,6 +32,12 @@ public class B extends A implements C{
 	}
 	
 	public void removeNull(List<String> texts){
-		
+		System.out.println("\nPrinting the list without NULL value.\n");
+		texts.stream().filter(text->text != null).forEach(System.out::println);
+	}
+	
+	public void givenMissingNumber(List<Integer> numbers){
+		System.out.println();
+		numbers.stream().distinct().forEach(x -> System.out.println(x));
 	}
 }
