@@ -1,4 +1,5 @@
 import java.util.*;
+import java.util.stream.*;
 
 public class B extends A implements C{
 		
@@ -14,7 +15,7 @@ public class B extends A implements C{
 	
     //this is an override method.
 	public void hello(){
-		System.out.print("hello Interface");
+		System.out.println("hello Interface\n");
 	}
 	
 	public void orderedList(List<String> texts){
@@ -38,6 +39,18 @@ public class B extends A implements C{
 	
 	public void givenMissingNumber(List<Integer> numbers){
 		System.out.println();
-		numbers.stream().distinct().forEach(x -> System.out.println(x));
+		List <Integer> missingNumbers = new ArrayList<>();
+		List<Integer> diferentNumbers = numbers.stream().distinct().collect(Collectors.toList());
+		for(int i=1;i<=10;i++){
+			if(diferentNumbers.contains(i)){
+				continue;
+			}else{
+				missingNumbers.add(i);
+			}
+		}
+		System.out.println("Missing numbers :");
+		missingNumbers.forEach(
+			(x)->System.out.println(x)
+		);
 	}
 }

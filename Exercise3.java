@@ -33,18 +33,18 @@ public class Exercise3{
 		A.checkString("Alameda");
 		
 		System.out.println("\nUsing functionality from (A) in a new method from (B).");
-		B.compareStringInB("Hi","Oli");
-		B.checkStringInB("Olalala");
+		B.compareStringInB("Hi","Oli"); //Calling method that was inherit in B.
+		B.checkStringInB("Olalala"); //Calling method that was inherit in B.
 		
 		System.out.println("\nprinting method hello from class B using Interface c.\n");
 		C objI = new B();
 		objI.hello();
 		
 		B obj = new B();
-		obj.orderedList(texts);
+		obj.orderedList(texts); //Printing the list of strings in ASC and Desc order.
 		
-		obj.removeNull(texts);
+		obj.removeNull(texts); //Printing the list of String without null value.
 		
-		obj.givenMissingNumber(numbers);
+		obj.givenMissingNumber(numbers); //Printing missing numbers from the list of Integers. 
  }
 }
